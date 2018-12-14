@@ -11,17 +11,17 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'NS Snow',
+    'title' => '[NITSAN] Snow',
     'description' => 'Add nice looking animation effect of falling snow to your TYPO3 site and enjoy winter as well as Christmas.',
     'category' => 'plugin',
-    'author' => 'Sanjay Chuahan [NITSAN Technologies]',
+    'author' => 'NITSAN Technologies',
     'author_email' => 'sanjay@nitsan.in',
     'state' => 'stable',
     'internal' => '',
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'constraints' => [
         'depends' => [
             'typo3' => '6.2.0-9.9.99',
