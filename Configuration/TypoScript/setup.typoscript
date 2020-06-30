@@ -1,0 +1,44 @@
+plugin.tx_nssnow_nssnows {
+    settings {
+        desktoponly = {$plugin.tx_nssnow_nssnows.settings.desktoponly}
+        flackcount = {$plugin.tx_nssnow_nssnows.settings.flackcount}
+        flackimg = {$plugin.tx_nssnow_nssnows.settings.flackimg}
+        flackcolor = {$plugin.tx_nssnow_nssnows.settings.flackcolor}
+        minflacksize = {$plugin.tx_nssnow_nssnows.settings.minflacksize}
+        maxflacksize = {$plugin.tx_nssnow_nssnows.settings.maxflacksize}
+        minflackspeed = {$plugin.tx_nssnow_nssnows.settings.minflackspeed}
+        maxflackspeed = {$plugin.tx_nssnow_nssnows.settings.maxflackspeed}
+        roundflack = {$plugin.tx_nssnow_nssnows.settings.roundflack}
+        shadowflack = {$plugin.tx_nssnow_nssnows.settings.shadowflack}
+        disablesnow = {$plugin.tx_nssnow_nssnows.settings.disablesnow}
+        jQuery = {$plugin.tx_nssnow_nssnows.settings.jQuery}
+        activeflackimg = {$plugin.tx_nssnow_nssnows.settings.activeflackimg}
+    }
+}
+page {
+    includeCSS {
+        snowcss = typo3conf/ext/ns_snow/Resources/Public/css/styles.css
+    }
+    includeJSLibs {
+        nsslickjquery = EXT:ns_snow/Resources/Public/js/jquery-2.1.0.js
+        nsslickjquery.if.isTrue = {$plugin.tx_nssnow_nssnows.settings.jQuery}
+    }
+    includeJSFooter {
+        snowjs = typo3conf/ext/ns_snow/Resources/Public/js/snowfall.jquery.min.js
+    }
+    111240 >
+    111240 = USER
+    111240 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        pluginName = Nssnows
+        extensionName = NsSnow
+        controller = NSnows
+        vendorName = Nitsan
+        action = list
+        switchableControllerActions {
+            NSnows {
+                1 = list
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+plugin.tx_nssnow_nssnows {
+    settings {
+        #cat = plugin.tx_nssnow_nssnows//a; type=boolean; label=Disable snow
+        disablesnow = 0
+
+        #cat = plugin.tx_nssnow_nssnows//b; type=boolean; label=Add jQuery
+        jQuery = 0
+
+        #cat = plugin.tx_nssnow_nssnows//c; type=color; label=Flack color
+        flackcolor = white
+
+        #cat = plugin.tx_nssnow_nssnows//d; type=int+; label=Flack count
+        flackcount = 50
+
+        #cat = plugin.tx_nssnow_nssnows//e; type=int+; label=Minimum flack size
+        minflacksize = 5
+
+        #cat = plugin.tx_nssnow_nssnows//f; type=int+; label=Maximum flack size
+        maxflacksize = 8
+
+        #cat = plugin.tx_nssnow_nssnows//g; type=int+; label=Minimum flack speed
+        minflackspeed = 5
+
+        #cat = plugin.tx_nssnow_nssnows//h; type=int+; label=Maximum flack speed
+        maxflackspeed = 10
+
+        #cat = plugin.tx_nssnow_nssnows//i; type=boolean; label=Round flack
+        roundflack = 1
+
+        #cat = plugin.tx_nssnow_nssnows//j; type=boolean; label=Shadow flack
+        shadowflack = 1
+
+        #cat = plugin.tx_nssnow_nssnows//k; type=boolean; label=Activate image as flack
+        activeflackimg = 0
+
+        #cat = plugin.tx_nssnow_nssnows//l; type=string; label=Flack image path
+        flackimg = typo3conf/ext/ns_snow/Resources/Public/images/flake.png
+
+        #cat = plugin.tx_nssnow_nssnows//m; type=boolean; label=Desktop Only
+        desktoponly = 0
+    }
+}
