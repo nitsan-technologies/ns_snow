@@ -34,7 +34,7 @@ plugin.tx_nssnow_nssnows {
         activeflackimg = 0
 
         #cat = plugin.tx_nssnow_nssnows//l; type=string; label=Flack image path
-        flackimg = typo3conf/ext/ns_snow/Resources/Public/images/flake.png
+        flackimg = EXT:ns_snow/Resources/Public/images/flake.png
 
         #cat = plugin.tx_nssnow_nssnows//m; type=boolean; label=Desktop Only
         desktoponly = 0
