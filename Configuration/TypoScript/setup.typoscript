@@ -20,7 +20,7 @@ page {
         snowcss = typo3conf/ext/ns_snow/Resources/Public/css/styles.css
     }
     includeJSLibs {
-        nsslickjquery = EXT:ns_snow/Resources/Public/js/jquery-2.1.0.js
+        nsslickjquery = EXT:ns_snow/Resources/Public/js/jquery-3.6.0.min.js
         nsslickjquery.if.isTrue = {$plugin.tx_nssnow_nssnows.settings.jQuery}
     }
     includeJSFooter {
