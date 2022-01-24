@@ -22,7 +22,7 @@
     }
   },
   "replace": {
-      "nitsan/ns-snow": "self.version"
+      "typo3-ter/ns-snow": "self.version"
   },
   "config": {
     "vendor-dir": ".Build/vendor/",
