@@ -1,7 +1,7 @@
 {
   "name": "nitsan/ns-snow",
   "type": "typo3-cms-extension",
-  "description": "Christmas Snow spreads the cheer of Christmas by adding beautiful snowflakes and snow-fall animation to your TYPO3 website with our little addon ns_snow and all the pages will show falling flakes of snow! Live-Demo: https://demo.t3terminal.com/t3t-extensions/snow/ You can download PRO version for more-features & free-support at https://t3terminal.com/typo3-snowfall-plugin-free/",
+  "description": "Christmas Snow spreads the cheer of Christmas by adding beautiful snowflakes and snow-fall animation to your TYPO3 website with our little addon ns_snow and all the pages will show falling flakes of snow! Live-Demo: https://demo.t3planet.com/t3t-extensions/snow/ You can download PRO version for more-features & free-support at https://t3planet.com/typo3-snowfall-extension",
   "homepage": "https://extensions.typo3.org/extension/ns_snow/",
   "license": "GPL-2.0+",
   "keywords": [
