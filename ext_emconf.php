@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => '[NITSAN] Snow Fall Plugin',
-    'description' => 'Christmas Snow spreads the cheer of Christmas by adding beautiful snowflakes and snow-fall animation to your TYPO3 website with our little addon ns_snow and all the pages will show falling flakes of snow! LIVE Demo: https://demo.t3terminal.com/t3t-extensions/snow/ PRO version: https://t3terminal.com/snowfall-typo3-extension-free',
+    'description' => 'Christmas Snow spreads the cheer of Christmas by adding beautiful snowflakes and snow-fall animation to your TYPO3 website with our little addon ns_snow and all the pages will show falling flakes of snow! LIVE Demo: https://demo.t3planet.com/t3t-extensions/snow/ PRO version: https://t3planet.com/snowfall-typo3-extension-free',
     'category' => 'plugin',
     'author' => 'NITSAN Technologies Pvt Ltd',
     'author_email' => 'sanjay@nitsan.in',
