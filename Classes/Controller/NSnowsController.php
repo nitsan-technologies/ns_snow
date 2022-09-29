@@ -40,6 +40,7 @@ class NSnowsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
         if ($disablesnow) {
         } else {
+            $GLOBALS['TSFE']->additionalFooterData['ns_snow']  = isset($GLOBALS['TSFE']->additionalFooterData['ns_snow']) ? $GLOBALS['TSFE']->additionalFooterData['ns_snow'] : '';
             if ($activeflackimg) {
                 if ($desktoponly) {
                     $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= "<script>
