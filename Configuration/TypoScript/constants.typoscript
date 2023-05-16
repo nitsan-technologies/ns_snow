@@ -33,8 +33,8 @@ plugin.tx_nssnow_nssnows {
         #cat = plugin.tx_nssnow_nssnows//k; type=boolean; label=Activate image as flack
         activeflackimg = 0
 
-        #cat = plugin.tx_nssnow_nssnows//l; type=string; label=Flack image path
-        flackimg = EXT:ns_snow/Resources/Public/images/flake.png
+        #cat = plugin.tx_nssnow_nssnows//l; type=string; label=Flack image path [Add image url or Fileadmin path]
+        flackimg = https://t3planet.com/typo3conf/ext/ns_theme_t3planet/Resources/Public/dist/assets/images/logo.svg
 
         #cat = plugin.tx_nssnow_nssnows//m; type=boolean; label=Desktop Only
         desktoponly = 0

@@ -1,6 +1,8 @@
 <?php
 namespace Nitsan\NsSnow\Controller;
 
+use Psr\Http\Message\ResponseInterface;
+
 /***
  *
  * This file is part of the "NS Snow" Extension for TYPO3 CMS.
@@ -21,26 +23,27 @@ class NSnowsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     /**
      * action list
      *
-     * @return void
+     * @return \Psr\Http\Message\ResponseInterface
      */
-    public function listAction()
+    public function listAction(): ResponseInterface
     {
-        $flackcount     =   $this->settings['flackcount'];
-        $activeflackimg =   $this->settings['activeflackimg'];
-        $flackimg       =   $this->settings['flackimg'];
-        $flackcolor     =   $this->settings['flackcolor'];
-        $minflacksize   =   $this->settings['minflacksize'];
-        $maxflacksize   =   $this->settings['maxflacksize'];
-        $minflackspeed  =   $this->settings['minflackspeed'];
-        $maxflackspeed  =   $this->settings['maxflackspeed'];
-        $roundflack     =   $this->settings['roundflack'];
-        $shadowflack    =   $this->settings['shadowflack'];
-        $disablesnow    =   $this->settings['disablesnow'];
-        $desktoponly    =   $this->settings['desktoponly'];
+        $flackcount = $this->settings['flackcount'];
+        $activeflackimg = $this->settings['activeflackimg'];
+        $flackimg = $this->settings['flackimg'];
+        $flackcolor = $this->settings['flackcolor'];
+        $minflacksize = $this->settings['minflacksize'];
+        $maxflacksize = $this->settings['maxflacksize'];
+        $minflackspeed = $this->settings['minflackspeed'];
+        $maxflackspeed = $this->settings['maxflackspeed'];
+        $roundflack = $this->settings['roundflack'];
+        $shadowflack = $this->settings['shadowflack'];
+        $disablesnow = $this->settings['disablesnow'];
+        $desktoponly = $this->settings['desktoponly'];
 
         if ($disablesnow) {
+            return $this->htmlResponse();
         } else {
-            $GLOBALS['TSFE']->additionalFooterData['ns_snow']  = isset($GLOBALS['TSFE']->additionalFooterData['ns_snow']) ? $GLOBALS['TSFE']->additionalFooterData['ns_snow'] : '';
+            $GLOBALS['TSFE']->additionalFooterData['ns_snow'] = isset($GLOBALS['TSFE']->additionalFooterData['ns_snow']) ? $GLOBALS['TSFE']->additionalFooterData['ns_snow'] : '';
             if ($activeflackimg) {
                 if ($desktoponly) {
                     $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= "<script>
@@ -86,6 +89,7 @@ class NSnowsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
                     </script>';
                 }
             }
+            return $this->htmlResponse();
         }
     }
 }
