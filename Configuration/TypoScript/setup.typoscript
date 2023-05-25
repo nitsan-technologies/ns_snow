@@ -17,14 +17,14 @@ plugin.tx_nssnow_nssnows {
 }
 page {
     includeCSS {
-        snowcss = typo3conf/ext/ns_snow/Resources/Public/css/styles.css
+        snowcss = EXT:ns_snow/Resources/Public/css/styles.css
     }
     includeJSLibs {
         nsslickjquery = EXT:ns_snow/Resources/Public/js/jquery-3.6.0.min.js
         nsslickjquery.if.isTrue = {$plugin.tx_nssnow_nssnows.settings.jQuery}
     }
     includeJSFooter {
-        snowjs = typo3conf/ext/ns_snow/Resources/Public/js/snowfall.jquery.min.js
+        snowjs = EXT:ns_snow/Resources/Public/js/snowfall.jquery.min.js
     }
     111240 >
     111240 = USER
