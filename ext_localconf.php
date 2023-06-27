@@ -1,4 +1,5 @@
 <?php
+
 defined('TYPO3') || die('Access denied.');
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
@@ -7,7 +8,4 @@ defined('TYPO3') || die('Access denied.');
     [
         \Nitsan\NsSnow\Controller\NSnowsController::class => 'list'
     ],
-    [
-        \Nitsan\NsSnow\Controller\NSnowsController::class => ''
-    ]
 );

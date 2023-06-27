@@ -1,4 +1,5 @@
 <?php
+
 namespace Nitsan\NsSnow\Controller;
 
 use Psr\Http\Message\ResponseInterface;
@@ -10,7 +11,7 @@ use Psr\Http\Message\ResponseInterface;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2018
+ *  (c) 2023
  *
  ***/
 
@@ -19,7 +20,6 @@ use Psr\Http\Message\ResponseInterface;
  */
 class NSnowsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
     /**
      * action list
      *
@@ -43,7 +43,7 @@ class NSnowsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         if ($disablesnow) {
             return $this->htmlResponse();
         } else {
-            $GLOBALS['TSFE']->additionalFooterData['ns_snow'] = isset($GLOBALS['TSFE']->additionalFooterData['ns_snow']) ? $GLOBALS['TSFE']->additionalFooterData['ns_snow'] : '';
+            $GLOBALS['TSFE']->additionalFooterData['ns_snow'] = $GLOBALS['TSFE']->additionalFooterData['ns_snow'] ?? '';
             if ($activeflackimg) {
                 if ($desktoponly) {
                     $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= "<script>
