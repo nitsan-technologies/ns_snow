@@ -1,19 +1,17 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
 
-if (version_compare(TYPO3_branch, '11.0', '>=')) {
-    $moduleClass = \Nitsan\NsSnow\Controller\NSnowsController::class;
-} else {
-    $moduleClass = 'NSnows';
-}
+use Nitsan\NsSnow\Controller\NSnowsController;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Nitsan.NsSnow',
+defined('TYPO3') || die('Access denied.');
+
+ExtensionUtility::configurePlugin(
+    'NsSnow',
     'Nssnows',
     [
-        $moduleClass => 'list'
+        NSnowsController::class => 'list'
     ],
     [
-        $moduleClass => ''
+        NSnowsController::class => ''
     ]
 );

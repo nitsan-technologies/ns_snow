@@ -8,13 +8,13 @@
     "TYPO3 CMS",
     "Snow fall",
     "Nitsan",
-    "Snow"    
+    "Snow"
   ],
   "support": {
     "issues": "https://github.com/nitsan-technologies/ns_snow/issues"
   },
   "require": {
-     "typo3/cms-core": "^6.0 || ^7.0 || ^8.0  || ^9.0 || ^10.0  || ^11.0 "
+      "typo3/cms-core": "^12"
   },
   "autoload": {
     "psr-4": {
