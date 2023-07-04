@@ -1,11 +1,17 @@
 <?php
 
+use Nitsan\NsSnow\Controller\NSnowsController;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
 defined('TYPO3') || die('Access denied.');
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+ExtensionUtility::configurePlugin(
     'NsSnow',
     'Nssnows',
     [
-        \Nitsan\NsSnow\Controller\NSnowsController::class => 'list'
+        NSnowsController::class => 'list'
     ],
+    [
+        NSnowsController::class => ''
+    ]
 );
