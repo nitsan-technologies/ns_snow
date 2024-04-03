@@ -1,5 +1,7 @@
-# ns_snow
+# Snow Fall
 
-- LIVE demo: https://demo.t3planet.com/t3t-extensions/snow
-- FREE version: You can download FREE version with basic-features at https://extensions.typo3.org/extension/ns_snow/
-- PRO version: You can download PRO version with more-features & free-support at https://t3planet.com/snowfall-typo3-extension-free
+- Live Frontend Demo: https://demo.t3planet.com/t3-extensions/snow
+- Live Backend Demo: https://demo.t3planet.com/live-typo3/t3t-extensions/typo3/?TYPO3_AUTOLOGIN_USER=editor-snow
+- Free version: https://extensions.typo3.org/extension/ns_snow/
+- Documentation: https://docs.t3planet.com/en/latest/ExtNsSnow/Index.html
+- Changelog: https://t3planet.com/typo3-snowfall-extension
