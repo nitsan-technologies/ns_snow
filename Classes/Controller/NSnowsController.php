@@ -1,7 +1,9 @@
 <?php
+
 namespace Nitsan\NsSnow\Controller;
 
 use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /***
  *
@@ -17,9 +19,8 @@ use Psr\Http\Message\ResponseInterface;
 /**
  * NSnowsController
  */
-class NSnowsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class NSnowsController extends ActionController
 {
-
     /**
      * action list
      *
