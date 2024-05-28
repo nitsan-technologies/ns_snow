@@ -7,7 +7,7 @@ plugin.tx_nssnow_nssnows {
         jQuery = 0
 
         #cat = plugin.tx_nssnow_nssnows//c; type=color; label=Flack color
-        flackcolor = white
+        flackcolor = #ffffff
 
         #cat = plugin.tx_nssnow_nssnows//d; type=int+; label=Flack count
         flackcount = 50
@@ -34,7 +34,7 @@ plugin.tx_nssnow_nssnows {
         activeflackimg = 0
 
         #cat = plugin.tx_nssnow_nssnows//l; type=string; label=Flack image path [Add image url or Fileadmin path]
-        flackimg = https://t3planet.com/typo3conf/ext/ns_theme_t3planet/Resources/Public/dist/assets/images/logo.svg
+        flackimg = https://demo.t3planet.com/t3-extensions/fileadmin/Extensions/ns_snow/flake.png
 
         #cat = plugin.tx_nssnow_nssnows//m; type=boolean; label=Desktop Only
         desktoponly = 0
