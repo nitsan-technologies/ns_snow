@@ -2,6 +2,7 @@
 
 namespace Nitsan\NsSnow\Controller;
 
+use TYPO3\CMS\Core\Http\Response;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
@@ -24,9 +25,9 @@ class NSnowsController extends ActionController
     /**
      * action list
      *
-     * @return ResponseInterface
+     * @return Response
      */
-    public function listAction(): ResponseInterface
+    public function listAction(): Response
     {
         $flackcount = $this->settings['flackcount'];
         $activeflackimg = $this->settings['activeflackimg'];
@@ -41,56 +42,43 @@ class NSnowsController extends ActionController
         $disablesnow = $this->settings['disablesnow'];
         $desktoponly = $this->settings['desktoponly'];
 
-        if ($disablesnow) {
-            return $this->htmlResponse();
-        } else {
+        if (!$disablesnow) {
             $GLOBALS['TSFE']->additionalFooterData['ns_snow'] = $GLOBALS['TSFE']->additionalFooterData['ns_snow'] ?? '';
-            if ($activeflackimg) {
-                if ($desktoponly) {
-                    $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= "<script>
-                                $(document).ready(function(){
-                                    if ($(window).width() > 768) {
-                                        $(document).snowfall();
-                                        $('.collectonme').hide();
-                                        $(document).snowfall('clear');
-                                        $(document).snowfall({image :'" . $flackimg . "', minSize: " . $minflacksize . ', maxSize:' . $maxflacksize . ',minSpeed: ' . $minflackspeed . ', maxSpeed: ' . $maxflackspeed . ',flakeCount:' . $flackcount . '});
-                                    }
-                                });
-                        </script>';
-                } else {
-                    $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= "<script>
-                        $(document).ready(function(){
-                            $(document).snowfall();
-                            $('.collectonme').hide();
-                            $(document).snowfall('clear');
-                            $(document).snowfall({image :'" . $flackimg . "', minSize: " . $minflacksize . ', maxSize:' . $maxflacksize . ',minSpeed: ' . $minflackspeed . ', maxSpeed: ' . $maxflackspeed . ',flakeCount:' . $flackcount . '});
-                        });
-                    </script>';
-                }
-            } else {
-                if ($desktoponly) {
-                    $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= "<script>
-                            $(document).ready(function(){
-                                if ($(window).width() > 768) {
-                                    $(document).snowfall();
-                                    $('.collectonme').hide();
-                                    $(document).snowfall('clear');
-                                    $(document).snowfall({shadow : " . $shadowflack . ', round : ' . $roundflack . ", flakeColor:'" . $flackcolor . "',  minSize: " . $minflacksize . ', maxSize:' . $maxflacksize . ',minSpeed: ' . $minflackspeed . ', maxSpeed: ' . $maxflackspeed . ', flakeCount:' . $flackcount . '});
-                                }
-                            });
-                        </script>';
-                } else {
-                    $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= "<script>
-                        $(document).ready(function(){
-                            $(document).snowfall();
-                            $('.collectonme').hide();
-                            $(document).snowfall('clear');
-                            $(document).snowfall({shadow : " . $shadowflack . ', round : ' . $roundflack . ", flakeColor:'" . $flackcolor . "',  minSize: " . $minflacksize . ', maxSize:' . $maxflacksize . ', minSpeed: ' . $minflackspeed . ', maxSpeed: ' . $maxflackspeed . ', flakeCount:' . $flackcount . '});
-                        });
-                    </script>';
-                }
+            $snowfallScript = "
+                <script>
+                    $(document).ready(function() {";
+            if ($desktoponly) {
+                $snowfallScript .= "
+                        if ($(window).width() > 768) {";
             }
-            return $this->htmlResponse();
+            $snowfallScript .= "
+                            $(document).snowfall();
+                            $('.collectonme').hide();
+                            $(document).snowfall('clear');
+                            $(document).snowfall({";
+            if ($activeflackimg) {
+                $snowfallScript .= "image: '" . $flackimg . "',";
+            } else {
+                $snowfallScript .= "shadow: " . $shadowflack . ", round: " . $roundflack . ", flakeColor: '" . $flackcolor . "',";
+            }
+            $snowfallScript .= "
+                                minSize: " . $minflacksize . ",
+                                maxSize: " . $maxflacksize . ",
+                                minSpeed: " . $minflackspeed . ",
+                                maxSpeed: " . $maxflackspeed . ",
+                                flakeCount: " . $flackcount . "
+                            });";
+            if ($desktoponly) {
+                $snowfallScript .= "
+                        }";
+            }
+            $snowfallScript .= "
+                    });
+                </script>";
+        
+            $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= $snowfallScript;
         }
+        $response = new Response();
+        return $response;
     }
 }
