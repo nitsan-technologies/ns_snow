@@ -6,3 +6,8 @@ services:
 
   Nitsan\NsSnow\:
     resource: '../Classes/*'
+    public: true 
+  
+  Nitsan\NsSnow\Controller\NSnowsController:
+    arguments:
+      $pageRenderer: '@TYPO3\CMS\Core\Page\PageRenderer'
