@@ -6,6 +6,17 @@ use TYPO3\CMS\Core\Http\Response;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
+/***
+ *
+ * This file is part of the "NS Snow" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ *  (c) 2018
+ *
+ ***/
+
 /**
  * NSnowsController
  */
@@ -57,8 +68,7 @@ class NSnowsController extends ActionController
                 $snowfallScript .= "shadow: " . $shadowflack . ", round: " . $roundflack . ", flakeColor: '" . $flackcolor . "',";
             }
             $snowfallScript .= "
-                                minSize: " . $minflacksize . ",git config --global user.email
-
+                                minSize: " . $minflacksize . ",
                                 maxSize: " . $maxflacksize . ",
                                 minSpeed: " . $minflackspeed . ",
                                 maxSpeed: " . $maxflackspeed . ",
