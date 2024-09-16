@@ -8,7 +8,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /***
  *
- * This file is part of the "NS Snow" Extension for TYPO3 CMS.
+ * This file is part of the "Snow" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -85,7 +85,6 @@ class NSnowsController extends ActionController
             $this->pageRenderer->addFooterData($snowfallScript);
         }
 
-        $response = new Response();
-        return $response;
+        return new Response();
     }
 }
