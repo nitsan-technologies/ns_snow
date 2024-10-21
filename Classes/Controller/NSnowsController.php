@@ -3,12 +3,12 @@
 namespace Nitsan\NsSnow\Controller;
 
 use TYPO3\CMS\Core\Http\Response;
-use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /***
  *
- * This file is part of the "NS Snow" Extension for TYPO3 CMS.
+ * This file is part of the "Snow" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -22,6 +22,13 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
  */
 class NSnowsController extends ActionController
 {
+    protected PageRenderer $pageRenderer;
+
+    public function __construct(PageRenderer $pageRenderer)
+    {
+        $this->pageRenderer = $pageRenderer;
+    }
+
     /**
      * action list
      *
@@ -43,7 +50,6 @@ class NSnowsController extends ActionController
         $desktoponly = $this->settings['desktoponly'];
 
         if (!$disablesnow) {
-            $GLOBALS['TSFE']->additionalFooterData['ns_snow'] = $GLOBALS['TSFE']->additionalFooterData['ns_snow'] ?? '';
             $snowfallScript = "
                 <script>
                     $(document).ready(function() {";
@@ -75,10 +81,10 @@ class NSnowsController extends ActionController
             $snowfallScript .= "
                     });
                 </script>";
-        
-            $GLOBALS['TSFE']->additionalFooterData['ns_snow'] .= $snowfallScript;
+
+            $this->pageRenderer->addFooterData($snowfallScript);
         }
-        $response = new Response();
-        return $response;
+
+        return new Response();
     }
 }

@@ -26,9 +26,9 @@ page {
     includeJSFooter {
         snowjs = EXT:ns_snow/Resources/Public/js/snowfall.jquery.min.js
     }
-    111240 >
-    111240 = USER
-    111240 {
+    1726490136 >
+    1726490136 = USER
+    1726490136 {
         userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
         pluginName = Nssnows
         extensionName = NsSnow
