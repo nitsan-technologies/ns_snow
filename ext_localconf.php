@@ -13,5 +13,6 @@ ExtensionUtility::configurePlugin(
     ],
     [
         NSnowsController::class => 'list'
-    ]
+    ],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
 );
