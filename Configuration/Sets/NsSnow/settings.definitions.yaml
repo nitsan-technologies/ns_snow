@@ -1,0 +1,87 @@
+categories:
+  ns_snow:
+    label: NsSnow Settings
+
+  ns_snow.general:
+    label: Snow Effect
+    parent: ns_snow
+
+
+settings:
+  ns_snow.disablesnow:
+    label: Disable snow
+    category: ns_snow.general
+    type: bool
+    default: false
+
+  ns_snow.jQuery:
+    label: Add jQuery
+    category: ns_snow.general
+    type: bool
+    default: false
+
+  ns_snow.flackcolor:
+    label: Flake color
+    category: ns_snow.general
+    type: color
+    default: '#FF8700'
+
+  ns_snow.flackcount:
+    label: Flake count
+    category: ns_snow.general
+    type: int
+    default: 50
+
+  ns_snow.minflacksize:
+    label: Minimum flake size
+    category: ns_snow.general
+    type: int
+    default: 5
+
+  ns_snow.maxflacksize:
+    label: Maximum flake size
+    category: ns_snow.general
+    type: int
+    default: 8
+
+  ns_snow.minflackspeed:
+    label: Minimum flake speed
+    category: ns_snow.general
+    type: int
+    default: 5
+
+  ns_snow.maxflackspeed:
+    label: Maximum flake speed
+    category: ns_snow.general
+    type: int
+    default: 10
+
+  ns_snow.roundflack:
+    label: Round flake
+    category: ns_snow.general
+    type: bool
+    default: true
+
+  ns_snow.shadowflack:
+    label: Shadow flake
+    category: ns_snow.general
+    type: bool
+    default: true
+
+  ns_snow.activeflackimg:
+    label: Activate image as flake
+    category: ns_snow.general
+    type: bool
+    default: false
+
+  ns_snow.flackimg:
+    label: Flake image path (URL or fileadmin path)
+    category: ns_snow.general
+    type: string
+    default: 'https://demo.t3planet.com/t3-extensions/fileadmin/Extensions/ns_snow/flake.png'
+
+  ns_snow.desktoponly:
+    label: Desktop Only
+    category: ns_snow.general
+    type: bool
+    default: false
