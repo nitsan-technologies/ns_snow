@@ -24,7 +24,7 @@ settings:
     label: Flake color
     category: ns_snow.general
     type: color
-    default: '#FF8700'
+    default: '#ffffff'
 
   ns_snow.flackcount:
     label: Flake count
