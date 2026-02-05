@@ -1,0 +1,22 @@
+@import 'EXT:ns_snow/Configuration/TypoScript/setup.typoscript'
+
+plugin.tx_nssnow_nssnows.settings {
+    desktoponly = {$ns_snow.desktoponly}
+    flackcount = {$ns_snow.flackcount}
+    flackimg = {$ns_snow.flackimg}
+    flackcolor = {$ns_snow.flackcolor}
+    minflacksize = {$ns_snow.minflacksize}
+    maxflacksize = {$ns_snow.maxflacksize}
+    minflackspeed = {$ns_snow.minflackspeed}
+    maxflackspeed = {$ns_snow.maxflackspeed}
+    roundflack = {$ns_snow.roundflack}
+    shadowflack = {$ns_snow.shadowflack}
+    disablesnow = {$ns_snow.disablesnow}
+    jQuery = {$ns_snow.jQuery}
+    activeflackimg = {$ns_snow.activeflackimg}
+}
+
+page.includeJSLibs {
+    nsslickjquery = EXT:ns_snow/Resources/Public/js/jquery-3.6.0.min.js
+    nsslickjquery.if.isTrue = {$ns_snow.jQuery}
+}

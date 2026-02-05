@@ -44,8 +44,8 @@ class NSnowsController extends ActionController
         $maxflacksize = $this->settings['maxflacksize'];
         $minflackspeed = $this->settings['minflackspeed'];
         $maxflackspeed = $this->settings['maxflackspeed'];
-        $roundflack = $this->settings['roundflack'];
-        $shadowflack = $this->settings['shadowflack'];
+        $shadowflack = ($this->settings['shadowflack'] !== '') ? $this->settings['shadowflack'] : '0';
+        $roundflack = ($this->settings['roundflack'] !== '') ? $this->settings['roundflack'] : '0';
         $disablesnow = $this->settings['disablesnow'];
         $desktoponly = $this->settings['desktoponly'];
 
